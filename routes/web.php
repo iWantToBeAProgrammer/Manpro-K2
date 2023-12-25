@@ -40,15 +40,27 @@ Route::middleware('auth', 'isAdmin')->group(function () {
 });
 
 Route::get('/', [UserController::class, 'index'])->name('index');
-Route::post('/profile-pic/{id}', [UserController::class, 'profile'])->name('profile.image');
 Route::get('/products', [UserController::class, 'show'])->name('index.products');
-Route::get('/add-to-cart', [UserController::class, 'addToCart'])->name('add-to-cart');
-Route::get('/cart', [UserController::class, 'cart'])->name('cart');
+
+Route::get('/thanks', [UserController::class, 'endpoint'])->name('endpoint');
+Route::get('/endpoint', [UserController::class, 'paymentSuccess'])->name('payment.success');
 
 Route::middleware('auth')->group(function () {
+    Route::post('/profile-pic/{id}', [UserController::class, 'profile'])->name('profile.image');
+    Route::get('/add-to-cart', [UserController::class, 'addToCart'])->name('add-to-cart');
+    Route::get('/cart', [UserController::class, 'cart'])->name('cart');
+    Route::get('/cart/delete/{id}', [UserController::class, 'cartDelete'])->name('cart.delete');
+    Route::post('/cart/update/{id}', [UserController::class, 'cartUpdate'])->name('cart.update');
+    Route::post('/cart/checkout', [UserController::class, 'checkout'])->name('checkout');
+    Route::post('/cart/insert-address', [UserController::class, 'insertAddress'])->name('insert.address');
+    Route::get('/shipping/provinsi', [UserController::class, 'provinsi'])->name('provinsi');
+    Route::get('/shipping/kota{id}', [UserController::class, 'kota'])->name('kota');
+    Route::post('/shipping/get-fee', [UserController::class, 'getFee'])->name('get.fee');
+
     Route::any('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::get('/shipping/{price}', [UserController::class, 'shipping'])->name('shipping');
 });
 
 require __DIR__ . '/auth.php';

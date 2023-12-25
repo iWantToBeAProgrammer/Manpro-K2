@@ -6,29 +6,29 @@ import { router } from "@inertiajs/react";
 
 export default function Index(props) {
 
+
     return (
         <>
         
-            <Navbar title='Dashboard' user={props.auth.user} cart={props.cart.data}/>
+            <Navbar title='Puff Vapor' user={props.auth.user} cart={props.cart}/>
             <div className="container-sm min-h-screen mx-auto px-12">
                 <Carousel />
-                <section id="service" className="mt-32">
-                    <div className="title-wrap w-full justify-between flex flex-wrap">
-                        <div className="service-title w-[250px]">
+                <section id="service" className="mt-24">
+                    <div className="title h-auto items-center w-full md:justify-between justify-center flex flex-wrap">
+                        <div className="service-title h-auto w-[250px] md:text-left text-center">
                             <h1 className="text-2xl font-bold">
                                 We provide best customer experiences
                             </h1>
                         </div>
-
-                        <div className="service-desc p-6 border-l-2">
-                            <small>
+                        <div className="p-6 border-l-2 h-auto md:mt-0 mt-12">
+                            <small className="inline-block">
                                 We ensure our customers have the best shopping
                                 experience
                             </small>
                         </div>
                     </div>
-                    <div className="flex justify-around">
-                        <div className="card w-[24rem] mt-6">
+                    <div className="flex justify-between mt-20 flex-wrap">
+                        <div className="card lg:w-[24rem] w-[48rem] mt-6">
                             <div className="card card-side bg-base-100 shadow-xl">
                                 <div className="card-body">
                                     <div className="icon w-12 h-12 bg-primary rounded-lg flex justify-center items-center">
@@ -57,7 +57,7 @@ export default function Index(props) {
                                 </div>
                             </div>
                         </div>
-                        <div className="card w-[24rem] mt-6">
+                        <div className="card lg:w-[24rem] w-[48rem] mt-6">
                             <div className="card card-side bg-base-100 shadow-xl">
                                 <div className="card-body">
                                     <div className="icon w-12 h-12 bg-primary rounded-lg flex justify-center items-center">
@@ -86,7 +86,7 @@ export default function Index(props) {
                                 </div>
                             </div>
                         </div>
-                        <div className="card w-[24rem] mt-6">
+                        <div className="card lg:w-[24rem] w-[48rem] mt-6">
                             <div className="card card-side bg-base-100 shadow-xl">
                                 <div className="card-body">
                                     <div className="icon w-12 h-12 bg-primary rounded-lg flex justify-center items-center">
@@ -115,7 +115,7 @@ export default function Index(props) {
                                 </div>
                             </div>
                         </div>
-                        <div className="card w-[24rem] mt-6">
+                        <div className="card lg:w-[24rem] w-[48rem] mt-6">
                             <div className="card card-side bg-base-100 shadow-xl">
                                 <div className="card-body">
                                     <div className="icon w-12 h-12 bg-primary rounded-lg flex justify-center items-center">
@@ -147,9 +147,9 @@ export default function Index(props) {
                     </div>
                 </section>
                 <section id="products" className="mt-32">
-                    <h1 className="text-2xl font-bold">Newest Products</h1>
-                    <div className="flex justify-around flex-wrap mt-8">
-                        <Card props={props} />
+                    <h1 className="text-2xl font-bold md:text-left text-center">Newest Products</h1>
+                    <div className="flex mt-8 gap-8 lg:justify-around lg:overflow-x-hidden overflow-x-scroll whitespace-nowrap">
+                        <Card props={props} className='inline-block'/>
                     </div>
                 </section>
                 <div className="flex justify-center mt-12">

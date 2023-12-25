@@ -1,14 +1,27 @@
 import { Link, router } from "@inertiajs/react";
-import { useState } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 const Navbar = ({ title, user, cart }) => {
-    const [name, setName] = useState("");
-    const [desc, setDesc] = useState("");
-    const [category, setCategory] = useState("");
-    const [price, setPrice] = useState("");
-    const [quantity, setQuantity] = useState("");
-    const [productId, setProductId] = useState("");
+
+    console.log(cart)
     const [image, setImage] = useState("");
+
+    let totalItems = 0;
+
+    if (cart) {
+        if (Array.isArray(cart)) {
+            if (cart != null) {
+                Array.from(cart).forEach((element) => {
+                    totalItems += element.product_qty;
+                });
+            }
+        } else {
+            totalItems = cart;
+        }
+    } else {
+        totalItems == 0
+    }
 
     const handleSubmit = () => {
         const data = {
@@ -28,7 +41,6 @@ const Navbar = ({ title, user, cart }) => {
         }
         return initials;
     };
-
     return (
         <div className="navbar bg-base-100 py-4">
             <div className="navbar-start">
@@ -58,10 +70,12 @@ const Navbar = ({ title, user, cart }) => {
                                 <Link href={route("home")}>Homepage</Link>
                             </li>
                             <li>
-                                <a>Products</a>
+                                <Link href={route("product-details")}>
+                                    Products
+                                </Link>
                             </li>
                             <li>
-                                <a>User</a>
+                                <Link href={route("user-details")}>User</Link>
                             </li>
                         </ul>
                     ) : (
@@ -73,24 +87,66 @@ const Navbar = ({ title, user, cart }) => {
                                 <Link href={route("index")}>Homepage</Link>
                             </li>
                             <li>
-                                <a>Products</a>
+                                <Link href={route("index.products")}>
+                                    Products
+                                </Link>
                             </li>
-                            <li>
-                                <a>Cart</a>
+                            <li className="md:hidden flex">
+                                <Link href={route("cart")}>Cart</Link>
                             </li>
                         </ul>
                     )}
                 </div>
             </div>
-            <div className="navbar-center">
-                <Link
-                    href={route("home")}
-                    className="btn btn-ghost normal-case text-xl"
-                >
-                    {title}
-                </Link>
-            </div>
+
+            {title == "Admin Dashboard" ? (
+                <div className="navbar-center">
+                    <Link
+                        href={route("home")}
+                        className="btn btn-ghost normal-case text-2xl"
+                    >
+                        {title}
+                    </Link>
+                </div>
+            ) : (
+                <div className="navbar-center">
+                    <Link
+                        href={route("index")}
+                        className="btn btn-ghost normal-case text-2xl"
+                    >
+                        {title}
+                    </Link>
+                </div>
+            )}
+
             <div className="navbar-end">
+                {title != "Admin Dashboard" ? (
+                    <Link
+                        href={route("cart")}
+                        className="btn me-8 md:flex hidden"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            strokeWidth={1.5}
+                            stroke="currentColor"
+                            className="w-6 h-6"
+                        >
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+                            />
+                        </svg>
+
+                        <div className="badge badge-secondary">
+                            {totalItems}
+                        </div>
+                    </Link>
+                ) : (
+                    <></>
+                )}
                 {user != null ? (
                     <div className="flex items-center gap-5">
                         <button

@@ -16,6 +16,7 @@ const Card = ({ props }) => {
     const [category, setCategory] = useState("");
     const [price, setPrice] = useState("");
     const [stock, setStock] = useState("");
+    const [weight, setWeight] = useState("");
     const [cartImage, setCartImage] = useState("");
     const [num, setNum] = useState(1);
 
@@ -41,7 +42,9 @@ const Card = ({ props }) => {
             quantity: num,
         }
 
-        console.log(props)
+        console.log(data)
+
+
         axios.get('http://localhost:8000/add-to-cart', data).then((response) => {
            if(response.status === 200) {
             Swal.fire('Product Added To Cart');
@@ -61,7 +64,7 @@ const Card = ({ props }) => {
                         className="card w-80 bg-base-100 shadow-xl mt-8"
                         key={i}
                     >
-                        <figure className="">
+                        <figure className="w-80">
                             {data.image == null || data.image == "" ? (
                                 <img
                                     src="http://localhost:8000/storage/assets/No_Image_Available.jpg"
@@ -94,6 +97,7 @@ const Card = ({ props }) => {
                                         setCategory(data.category);
                                         setPrice(data.price);
                                         setStock(data.stock);
+                                        setWeight(data.weight)
                                         setCartImage(data.image);
                                         window.cart.show();
                                     }}
@@ -107,8 +111,8 @@ const Card = ({ props }) => {
             })}
             <dialog id="cart" className="modal modal-bottom sm:modal-middle">
                 <form method="dialog" className=" modal-box">
-                    <div className="w-[100%] flex justify-between">
-                        <div className="me-8">
+                    <div className="w-[100%] flex justify-between items-center">
+                        <div className="me-8 w-[100%]">
                             {cartImage == "" || cartImage == null ? (
                                 <img
                                     src={`http://localhost:8000/storage/assets/No_Image_Available.jpg`}
@@ -123,8 +127,8 @@ const Card = ({ props }) => {
                                 />
                             )}
                         </div>
-                        <div className="">
-                            <h3 className="font-bold text-lg">
+                        <div className="w-[100%] overflow-hidden whitespace-break-spaces">
+                            <h3 className="font-bold text-lg ">
                                 Product name: {name}
                             </h3>
                             <p className="py-2">Product desc: {desc}</p>
@@ -132,7 +136,8 @@ const Card = ({ props }) => {
                             <p className="py-2">
                                 Price: {Rupiah.format(price)}
                             </p>
-                            <p>Stock: {stock}</p>
+                            <p className="py-2">Stock: {stock}</p>
+                            <p className="py-2">Weight: {weight}</p>
                         </div>
                     </div>
                     <div className="modal-action">

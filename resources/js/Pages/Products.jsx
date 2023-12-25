@@ -3,9 +3,15 @@ import Navbar from "@/Components/Navbar";
 
 export default function Products(props) {
 
+
+    console.log(props)
     return (
         <>
-            <Navbar title='Dashboard' user={props.auth.user} cart={props.cart.data}/>
+            <Navbar
+                title="Dashboard"
+                user={props.auth.user}
+                cart={props.cart}
+            />
             <div className="container-sm min-h-screen mx-auto px-12">
                 <h1 className="text-2xl font-bold">Our Products</h1>
                 <div className="flex justify-around mt-12 flex-wrap">
@@ -14,7 +20,7 @@ export default function Products(props) {
                 <div className="flex justify-center mt-12">
                     <button
                         className="btn btn-wide btn-primary"
-                        onClick={() => window.location.href = route('index')}
+                        onClick={() => (window.location.href = route("index"))}
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"

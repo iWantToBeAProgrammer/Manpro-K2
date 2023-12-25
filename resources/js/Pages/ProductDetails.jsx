@@ -15,6 +15,7 @@ export default function ProductDetails(props) {
     const [price, setPrice] = useState("");
     const [stock, setStock] = useState("");
     const [image, setImage] = useState("");
+    const [weight, setWeight] = useState("");
     const [isOpen, setIsOpen] = useState("");
     const [isNotif, setIsNotif] = useState(false);
 
@@ -50,6 +51,7 @@ export default function ProductDetails(props) {
             category,
             price,
             stock,
+            weight,
             image,
         };
 
@@ -63,6 +65,7 @@ export default function ProductDetails(props) {
         setPrice("");
         setStock("");
         setImage("");
+        setWeight("");
         router.post(route("product-post"), data);
     };
 
@@ -74,6 +77,7 @@ export default function ProductDetails(props) {
             category,
             price,
             stock,
+            weight,
             image,
         };
         setIsNotif(true);
@@ -85,6 +89,7 @@ export default function ProductDetails(props) {
         setCategory("");
         setPrice("");
         setStock("");
+        setWeight("");
         router.post(route("product-update", id), data);
     };
 
@@ -175,6 +180,17 @@ export default function ProductDetails(props) {
                             value={stock}
                         />
                         <input
+                            type="number"
+                            min="0"
+                            step="0.01"
+                            placeholder="Weight"
+                            className="input input-bordered input-primary w-full max-w-xs"
+                            onChange={(weight) =>
+                                setWeight(weight.target.value)
+                            }
+                            value={weight}
+                        />
+                        <input
                             type="file"
                             className="file-input file-input-bordered file-input-primary w-full max-w-xs"
                             label="Image"
@@ -205,6 +221,7 @@ export default function ProductDetails(props) {
                             <th>Product Desc</th>
                             <th>Product Category</th>
                             <th>Product Price</th>
+                            <th>Product Weight</th>
                             <th>Product Image</th>
                         </tr>
                     </thead>
@@ -217,14 +234,16 @@ export default function ProductDetails(props) {
                                     <td>{data.product_desc}</td>
                                     <td>{data.category}</td>
                                     <td>{Rupiah.format(data.price)}</td>
+                                    <td>
+                                        {data.weight == null ? 0 : data.weight}
+                                    </td>
                                     <button
                                         onClick={() => {
                                             setIsOpen(data.image);
                                             window.my_modal_3.show();
                                         }}
                                     >
-                                        {
-                                        data.image == "" || !data.image? (
+                                        {data.image == "" || !data.image ? (
                                             <img
                                                 src="http://localhost:8000/storage/assets/No_Image_Available.jpg"
                                                 width={100}
@@ -274,6 +293,10 @@ export default function ProductDetails(props) {
                                                         setStock(
                                                             response.data
                                                                 .product.stock
+                                                        );
+                                                        setWeight(
+                                                            response.data
+                                                                .product.weight
                                                         );
                                                         setImage(
                                                             response.data
@@ -355,6 +378,17 @@ export default function ProductDetails(props) {
                             value={stock}
                         />
                         <input
+                            type="number"
+                            min="0"
+                            step="0.01"
+                            placeholder="Weight"
+                            className="input input-bordered input-primary w-full max-w-xs"
+                            onChange={(weight) =>
+                                setWeight(weight.target.value)
+                            }
+                            value={weight}
+                        />
+                        <input
                             type="file"
                             className="file-input file-input-bordered file-input-primary w-full max-w-xs"
                             label="Image"
@@ -378,6 +412,7 @@ export default function ProductDetails(props) {
                                 setCategory("");
                                 setPrice("");
                                 setStock("");
+                                setWeight("");
                             }}
                         >
                             close

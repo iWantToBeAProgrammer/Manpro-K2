@@ -61,6 +61,7 @@ class AdminController extends Controller
         $product->category = $request->category;
         $product->price = $request->price;
         $product->stock = $request->stock;
+        $product->weight = $request->weight;
         if ($request->file('image')) {
             $product->image = $request->file('image')->store('product-images', 'public');
         } else {
@@ -88,6 +89,7 @@ class AdminController extends Controller
             'category' => $request->category,
             'price' => $request->price,
             'stock' => $request->stock,
+            'weight' => $request->weight,
             'image' => $request->file('image')->store('product-images', 'public')
         ]);
 
