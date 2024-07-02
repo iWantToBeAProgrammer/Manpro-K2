@@ -160,7 +160,7 @@ class UserController extends Controller
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "GET",
             CURLOPT_HTTPHEADER => array(
-                "key: 6c78cd6002ff41db97b5d733796df44b"
+                "key: 4cd2407800b641caf82041da7739d88d"
             ),
         ));
 
@@ -180,7 +180,7 @@ class UserController extends Controller
     {
 
 
-        
+
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
@@ -192,7 +192,7 @@ class UserController extends Controller
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "GET",
             CURLOPT_HTTPHEADER => array(
-                "key: 6c78cd6002ff41db97b5d733796df44b"
+                "key: 4cd2407800b641caf82041da7739d88d"
             ),
         ));
 
@@ -212,15 +212,15 @@ class UserController extends Controller
     {
 
         Address::create([
-            
+
             'name' => $request->name,
             'phone_number' => $request->phone,
             'street' => $request->street,
             'city' => $request->city,
             'subdistrict' => $request->subdistrict,
-            'postal_code'=> $request->postalCode,
+            'postal_code' => $request->postalCode,
         ]);
-        
+
 
         $destination = $request->city;
         $weight = $request->weight;
@@ -238,7 +238,7 @@ class UserController extends Controller
             CURLOPT_POSTFIELDS => "origin=399&destination={$destination}&weight={$weight}&courier=jne",
             CURLOPT_HTTPHEADER => array(
                 "content-type: application/x-www-form-urlencoded",
-                "key: 6c78cd6002ff41db97b5d733796df44b"
+                "key: 4cd2407800b641caf82041da7739d88d"
             ),
         ));
 

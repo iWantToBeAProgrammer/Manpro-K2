@@ -6,6 +6,8 @@ import { useEffect, useState } from "react";
 import { Snap } from "midtrans-client";
 
 export default function Cart(props) {
+    console.log(props)
+
     let totalItems = 0;
 
     let totalPrice = 0;

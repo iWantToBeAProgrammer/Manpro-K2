@@ -3,7 +3,6 @@ import axios from "axios";
 import { router } from "@inertiajs/react";
 import Navbar from "@/Components/Navbar";
 
-
 export default function Shipping(props) {
     console.log(props);
 
@@ -42,7 +41,6 @@ export default function Shipping(props) {
         };
 
         provinsi();
-
         const snapScript = "https://app.sandbox.midtrans.com/snap/snap.js";
         const clientKey = import.meta.env.MIDTRANS_CLIENT_KEY;
         const script = document.createElement("script");
@@ -58,7 +56,7 @@ export default function Shipping(props) {
         };
     }, []);
 
-    console.log(props.cart);
+    console.log(provinsi);
 
     const totalWeight = () => {
         let total = 0;
@@ -113,7 +111,6 @@ export default function Shipping(props) {
 
     return (
         <>
-
             <Navbar
                 title="Puff Vapor"
                 user={props.auth.user}
