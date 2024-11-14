@@ -1,6 +1,17 @@
-node_modules
-vendor
-.git
-*.md
-*.env
-storage
+# Ignore .git directory
+.git/
+
+# Ignore node_modules
+node_modules/
+
+# Ignore storage files that are already managed by Docker volumes
+storage/
+
+# Ignore environment files (optional, if not needed in Docker container)
+.env
+
+# Ignore composer vendor directory (if rebuilding container, the dependencies will be reinstalled)
+vendor/
+
+# Ignore build files from Vite
+dist/

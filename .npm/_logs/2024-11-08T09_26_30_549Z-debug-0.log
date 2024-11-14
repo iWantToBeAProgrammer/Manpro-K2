@@ -1,0 +1,491 @@
+0 verbose cli /usr/bin/node /usr/bin/npm
+1 info using npm@10.7.0
+2 info using node@v18.20.4
+3 silly config:load:file:/usr/lib/node_modules/npm/npmrc
+4 silly config:load:file:/var/www/.npmrc
+5 silly config:load:file:/usr/etc/npmrc
+6 verbose title npm i
+7 verbose argv "i"
+8 verbose logfile logs-max:10 dir:/var/www/.npm/_logs/2024-11-08T09_26_30_549Z-
+9 verbose logfile /var/www/.npm/_logs/2024-11-08T09_26_30_549Z-debug-0.log
+10 silly logfile done cleaning log files
+11 silly idealTree buildDeps
+12 silly reify moves {}
+13 silly audit bulk request {
+13 silly audit   '@alloc/quick-lru': [ '5.2.0' ],
+13 silly audit   '@ampproject/remapping': [ '2.2.1' ],
+13 silly audit   '@babel/code-frame': [ '7.22.5' ],
+13 silly audit   '@babel/compat-data': [ '7.22.5' ],
+13 silly audit   '@babel/core': [ '7.22.5' ],
+13 silly audit   '@babel/generator': [ '7.22.5' ],
+13 silly audit   '@babel/helper-compilation-targets': [ '7.22.5' ],
+13 silly audit   '@babel/helper-environment-visitor': [ '7.22.5' ],
+13 silly audit   '@babel/helper-function-name': [ '7.22.5' ],
+13 silly audit   '@babel/helper-hoist-variables': [ '7.22.5' ],
+13 silly audit   '@babel/helper-module-imports': [ '7.22.5' ],
+13 silly audit   '@babel/helper-module-transforms': [ '7.22.5' ],
+13 silly audit   '@babel/helper-plugin-utils': [ '7.22.5' ],
+13 silly audit   '@babel/helper-simple-access': [ '7.22.5' ],
+13 silly audit   '@babel/helper-split-export-declaration': [ '7.22.5' ],
+13 silly audit   '@babel/helper-string-parser': [ '7.22.5' ],
+13 silly audit   '@babel/helper-validator-identifier': [ '7.22.5' ],
+13 silly audit   '@babel/helper-validator-option': [ '7.22.5' ],
+13 silly audit   '@babel/helpers': [ '7.22.5' ],
+13 silly audit   '@babel/highlight': [ '7.22.5' ],
+13 silly audit   '@babel/parser': [ '7.22.5' ],
+13 silly audit   '@babel/plugin-transform-react-jsx-self': [ '7.22.5' ],
+13 silly audit   '@babel/plugin-transform-react-jsx-source': [ '7.22.5' ],
+13 silly audit   '@babel/template': [ '7.22.5' ],
+13 silly audit   '@babel/traverse': [ '7.22.5' ],
+13 silly audit   '@babel/types': [ '7.22.5' ],
+13 silly audit   '@esbuild/android-arm': [ '0.17.19' ],
+13 silly audit   '@esbuild/android-arm64': [ '0.17.19' ],
+13 silly audit   '@esbuild/android-x64': [ '0.17.19' ],
+13 silly audit   '@esbuild/darwin-arm64': [ '0.17.19' ],
+13 silly audit   '@esbuild/darwin-x64': [ '0.17.19' ],
+13 silly audit   '@esbuild/freebsd-arm64': [ '0.17.19' ],
+13 silly audit   '@esbuild/freebsd-x64': [ '0.17.19' ],
+13 silly audit   '@esbuild/linux-arm': [ '0.17.19' ],
+13 silly audit   '@esbuild/linux-arm64': [ '0.17.19' ],
+13 silly audit   '@esbuild/linux-ia32': [ '0.17.19' ],
+13 silly audit   '@esbuild/linux-loong64': [ '0.17.19' ],
+13 silly audit   '@esbuild/linux-mips64el': [ '0.17.19' ],
+13 silly audit   '@esbuild/linux-ppc64': [ '0.17.19' ],
+13 silly audit   '@esbuild/linux-riscv64': [ '0.17.19' ],
+13 silly audit   '@esbuild/linux-s390x': [ '0.17.19' ],
+13 silly audit   '@esbuild/linux-x64': [ '0.17.19' ],
+13 silly audit   '@esbuild/netbsd-x64': [ '0.17.19' ],
+13 silly audit   '@esbuild/openbsd-x64': [ '0.17.19' ],
+13 silly audit   '@esbuild/sunos-x64': [ '0.17.19' ],
+13 silly audit   '@esbuild/win32-arm64': [ '0.17.19' ],
+13 silly audit   '@esbuild/win32-ia32': [ '0.17.19' ],
+13 silly audit   '@esbuild/win32-x64': [ '0.17.19' ],
+13 silly audit   '@fortawesome/fontawesome-common-types': [ '6.4.0' ],
+13 silly audit   '@fortawesome/fontawesome-svg-core': [ '6.4.0' ],
+13 silly audit   '@fortawesome/free-solid-svg-icons': [ '6.4.0' ],
+13 silly audit   '@fortawesome/react-fontawesome': [ '0.2.0' ],
+13 silly audit   '@headlessui/react': [ '1.7.15' ],
+13 silly audit   '@inertiajs/core': [ '1.0.8' ],
+13 silly audit   '@inertiajs/react': [ '1.0.8' ],
+13 silly audit   '@jridgewell/gen-mapping': [ '0.3.3' ],
+13 silly audit   '@jridgewell/resolve-uri': [ '3.1.0' ],
+13 silly audit   '@jridgewell/set-array': [ '1.1.2' ],
+13 silly audit   '@jridgewell/sourcemap-codec': [ '1.4.15', '1.4.14' ],
+13 silly audit   '@jridgewell/trace-mapping': [ '0.3.18' ],
+13 silly audit   '@nodelib/fs.scandir': [ '2.1.5' ],
+13 silly audit   '@nodelib/fs.stat': [ '2.0.5' ],
+13 silly audit   '@nodelib/fs.walk': [ '1.2.8' ],
+13 silly audit   '@sweetalert2/theme-dark': [ '5.0.15' ],
+13 silly audit   '@tailwindcss/forms': [ '0.5.3' ],
+13 silly audit   '@vitejs/plugin-react': [ '3.1.0' ],
+13 silly audit   'ansi-styles': [ '3.2.1' ],
+13 silly audit   'any-promise': [ '1.3.0' ],
+13 silly audit   anymatch: [ '3.1.3' ],
+13 silly audit   arg: [ '5.0.2' ],
+13 silly audit   asynckit: [ '0.4.0' ],
+13 silly audit   autoprefixer: [ '10.4.14' ],
+13 silly audit   axios: [ '1.4.0', '0.26.1' ],
+13 silly audit   'balanced-match': [ '1.0.2' ],
+13 silly audit   'binary-extensions': [ '2.2.0' ],
+13 silly audit   'brace-expansion': [ '1.1.11' ],
+13 silly audit   braces: [ '3.0.2' ],
+13 silly audit   browserslist: [ '4.21.9' ],
+13 silly audit   'call-bind': [ '1.0.2' ],
+13 silly audit   'camelcase-css': [ '2.0.1' ],
+13 silly audit   'caniuse-lite': [ '1.0.30001506' ],
+13 silly audit   chalk: [ '2.4.2' ],
+13 silly audit   chokidar: [ '3.5.3' ],
+13 silly audit   'glob-parent': [ '5.1.2', '6.0.2' ],
+13 silly audit   'client-only': [ '0.0.1' ],
+13 silly audit   'color-convert': [ '1.9.3' ],
+13 silly audit   'color-name': [ '1.1.3' ],
+13 silly audit   colord: [ '2.9.3' ],
+13 silly audit   'combined-stream': [ '1.0.8' ],
+13 silly audit   commander: [ '4.1.1' ],
+13 silly audit   'concat-map': [ '0.0.1' ],
+13 silly audit   'convert-source-map': [ '1.9.0' ],
+13 silly audit   'css-selector-tokenizer': [ '0.8.0' ],
+13 silly audit   cssesc: [ '3.0.0' ],
+13 silly audit   daisyui: [ '3.1.5' ],
+13 silly audit   debug: [ '4.3.4' ],
+13 silly audit   deepmerge: [ '4.3.1' ],
+13 silly audit   'delayed-stream': [ '1.0.0' ],
+13 silly audit   didyoumean: [ '1.2.2' ],
+13 silly audit   dlv: [ '1.1.3' ],
+13 silly audit   'electron-to-chromium': [ '1.4.437' ],
+13 silly audit   esbuild: [ '0.17.19' ],
+13 silly audit   escalade: [ '3.1.1' ],
+13 silly audit   'escape-string-regexp': [ '1.0.5' ],
+13 silly audit   'fast-glob': [ '3.2.12' ],
+13 silly audit   fastparse: [ '1.1.2' ],
+13 silly audit   fastq: [ '1.15.0' ],
+13 silly audit   'fill-range': [ '7.0.1' ],
+13 silly audit   'follow-redirects': [ '1.15.2' ],
+13 silly audit   'form-data': [ '4.0.0' ],
+13 silly audit   'fraction.js': [ '4.2.0' ],
+13 silly audit   'fs.realpath': [ '1.0.0' ],
+13 silly audit   fsevents: [ '2.3.2' ],
+13 silly audit   'function-bind': [ '1.1.1' ],
+13 silly audit   gensync: [ '1.0.0-beta.2' ],
+13 silly audit   'get-intrinsic': [ '1.2.1' ],
+13 silly audit   glob: [ '7.1.6' ],
+13 silly audit   globals: [ '11.12.0' ],
+13 silly audit   has: [ '1.0.3' ],
+13 silly audit   'has-flag': [ '3.0.0' ],
+13 silly audit   'has-proto': [ '1.0.1' ],
+13 silly audit   'has-symbols': [ '1.0.3' ],
+13 silly audit   inflight: [ '1.0.6' ],
+13 silly audit   inherits: [ '2.0.4' ],
+13 silly audit   'is-binary-path': [ '2.1.0' ],
+13 silly audit   'is-core-module': [ '2.12.1' ],
+13 silly audit   'is-extglob': [ '2.1.1' ],
+13 silly audit   'is-glob': [ '4.0.3' ],
+13 silly audit   'is-number': [ '7.0.0' ],
+13 silly audit   jiti: [ '1.18.2' ],
+13 silly audit   'js-tokens': [ '4.0.0' ],
+13 silly audit   jsesc: [ '2.5.2' ],
+13 silly audit   json5: [ '2.2.3' ],
+13 silly audit   'laravel-vite-plugin': [ '0.7.8' ],
+13 silly audit   lilconfig: [ '2.1.0' ],
+13 silly audit   'lines-and-columns': [ '1.2.4' ],
+13 silly audit   lodash: [ '4.17.21' ],
+13 silly audit   'lodash.isequal': [ '4.5.0' ],
+13 silly audit   'loose-envify': [ '1.4.0' ],
+13 silly audit   'lru-cache': [ '5.1.1' ],
+13 silly audit   'magic-string': [ '0.27.0' ],
+13 silly audit   merge2: [ '1.4.1' ],
+13 silly audit   micromatch: [ '4.0.5' ],
+13 silly audit   'midtrans-client': [ '1.3.1' ],
+13 silly audit   'mime-db': [ '1.52.0' ],
+13 silly audit   'mime-types': [ '2.1.35' ],
+13 silly audit   'mini-svg-data-uri': [ '1.4.4' ],
+13 silly audit   minimatch: [ '3.1.2' ],
+13 silly audit   ms: [ '2.1.2' ],
+13 silly audit   mz: [ '2.7.0' ],
+13 silly audit   nanoid: [ '3.3.6' ],
+13 silly audit   'node-releases': [ '2.0.12' ],
+13 silly audit   'normalize-path': [ '3.0.0' ],
+13 silly audit   'normalize-range': [ '0.1.2' ],
+13 silly audit   nprogress: [ '0.2.0' ],
+13 silly audit   'object-assign': [ '4.1.1' ],
+13 silly audit   'object-hash': [ '3.0.0' ],
+13 silly audit   'object-inspect': [ '1.12.3' ],
+13 silly audit   once: [ '1.4.0' ],
+13 silly audit   'path-is-absolute': [ '1.0.1' ],
+13 silly audit   'path-parse': [ '1.0.7' ],
+13 silly audit   picocolors: [ '1.0.0' ],
+13 silly audit   picomatch: [ '2.3.1' ],
+13 silly audit   pify: [ '2.3.0' ],
+13 silly audit   pirates: [ '4.0.6' ],
+13 silly audit   postcss: [ '8.4.24' ],
+13 silly audit   'postcss-import': [ '15.1.0' ],
+13 silly audit   'postcss-js': [ '4.0.1' ],
+13 silly audit   'postcss-load-config': [ '4.0.1' ],
+13 silly audit   'postcss-nested': [ '6.0.1' ],
+13 silly audit   'postcss-selector-parser': [ '6.0.13' ],
+13 silly audit   'postcss-value-parser': [ '4.2.0' ],
+13 silly audit   'prop-types': [ '15.8.1' ],
+13 silly audit   'proxy-from-env': [ '1.1.0' ],
+13 silly audit   qs: [ '6.11.2' ],
+13 silly audit   'queue-microtask': [ '1.2.3' ],
+13 silly audit   react: [ '18.2.0' ],
+13 silly audit   'react-dom': [ '18.2.0' ],
+13 silly audit   'react-is': [ '16.13.1' ],
+13 silly audit   'react-refresh': [ '0.14.0' ],
+13 silly audit   'read-cache': [ '1.0.0' ],
+13 silly audit   readdirp: [ '3.6.0' ],
+13 silly audit   resolve: [ '1.22.2' ],
+13 silly audit   reusify: [ '1.0.4' ],
+13 silly audit   rollup: [ '3.25.1' ],
+13 silly audit   'run-parallel': [ '1.2.0' ],
+13 silly audit   scheduler: [ '0.23.0' ],
+13 silly audit   semver: [ '6.3.0' ],
+13 silly audit   'side-channel': [ '1.0.4' ],
+13 silly audit   'source-map-js': [ '1.0.2' ],
+13 silly audit   sucrase: [ '3.32.0' ],
+13 silly audit   'supports-color': [ '5.5.0' ],
+13 silly audit   'supports-preserve-symlinks-flag': [ '1.0.0' ],
+13 silly audit   sweetalert2: [ '11.7.12' ],
+13 silly audit   tailwindcss: [ '3.3.2' ],
+13 silly audit   thenify: [ '3.3.1' ],
+13 silly audit   'thenify-all': [ '1.6.0' ],
+13 silly audit   'to-fast-properties': [ '2.0.0' ],
+13 silly audit   'to-regex-range': [ '5.0.1' ],
+13 silly audit   'ts-interface-checker': [ '0.1.13' ],
+13 silly audit   'update-browserslist-db': [ '1.0.11' ],
+13 silly audit   'util-deprecate': [ '1.0.2' ],
+13 silly audit   vite: [ '4.3.9' ],
+13 silly audit   'vite-plugin-full-reload': [ '1.0.5' ],
+13 silly audit   wrappy: [ '1.0.2' ],
+13 silly audit   yallist: [ '3.1.1' ],
+13 silly audit   yaml: [ '2.3.1' ]
+13 silly audit }
+14 verbose reify failed optional dependency /var/www/node_modules/fsevents
+15 silly reify mark deleted [ '/var/www/node_modules/fsevents' ]
+16 verbose reify failed optional dependency /var/www/node_modules/@esbuild/win32-ia32
+17 silly reify mark deleted [ '/var/www/node_modules/@esbuild/win32-ia32' ]
+18 verbose reify failed optional dependency /var/www/node_modules/@esbuild/win32-arm64
+19 silly reify mark deleted [ '/var/www/node_modules/@esbuild/win32-arm64' ]
+20 verbose reify failed optional dependency /var/www/node_modules/@esbuild/sunos-x64
+21 silly reify mark deleted [ '/var/www/node_modules/@esbuild/sunos-x64' ]
+22 verbose reify failed optional dependency /var/www/node_modules/@esbuild/openbsd-x64
+23 silly reify mark deleted [ '/var/www/node_modules/@esbuild/openbsd-x64' ]
+24 verbose reify failed optional dependency /var/www/node_modules/@esbuild/netbsd-x64
+25 silly reify mark deleted [ '/var/www/node_modules/@esbuild/netbsd-x64' ]
+26 verbose reify failed optional dependency /var/www/node_modules/@esbuild/linux-s390x
+27 silly reify mark deleted [ '/var/www/node_modules/@esbuild/linux-s390x' ]
+28 verbose reify failed optional dependency /var/www/node_modules/@esbuild/linux-riscv64
+29 silly reify mark deleted [ '/var/www/node_modules/@esbuild/linux-riscv64' ]
+30 verbose reify failed optional dependency /var/www/node_modules/@esbuild/linux-ppc64
+31 silly reify mark deleted [ '/var/www/node_modules/@esbuild/linux-ppc64' ]
+32 verbose reify failed optional dependency /var/www/node_modules/@esbuild/linux-mips64el
+33 silly reify mark deleted [ '/var/www/node_modules/@esbuild/linux-mips64el' ]
+34 verbose reify failed optional dependency /var/www/node_modules/@esbuild/linux-loong64
+35 silly reify mark deleted [ '/var/www/node_modules/@esbuild/linux-loong64' ]
+36 verbose reify failed optional dependency /var/www/node_modules/@esbuild/linux-ia32
+37 silly reify mark deleted [ '/var/www/node_modules/@esbuild/linux-ia32' ]
+38 verbose reify failed optional dependency /var/www/node_modules/@esbuild/linux-arm64
+39 silly reify mark deleted [ '/var/www/node_modules/@esbuild/linux-arm64' ]
+40 verbose reify failed optional dependency /var/www/node_modules/@esbuild/linux-arm
+41 silly reify mark deleted [ '/var/www/node_modules/@esbuild/linux-arm' ]
+42 verbose reify failed optional dependency /var/www/node_modules/@esbuild/freebsd-x64
+43 silly reify mark deleted [ '/var/www/node_modules/@esbuild/freebsd-x64' ]
+44 verbose reify failed optional dependency /var/www/node_modules/@esbuild/freebsd-arm64
+45 silly reify mark deleted [ '/var/www/node_modules/@esbuild/freebsd-arm64' ]
+46 verbose reify failed optional dependency /var/www/node_modules/@esbuild/darwin-x64
+47 silly reify mark deleted [ '/var/www/node_modules/@esbuild/darwin-x64' ]
+48 verbose reify failed optional dependency /var/www/node_modules/@esbuild/darwin-arm64
+49 silly reify mark deleted [ '/var/www/node_modules/@esbuild/darwin-arm64' ]
+50 verbose reify failed optional dependency /var/www/node_modules/@esbuild/android-x64
+51 silly reify mark deleted [ '/var/www/node_modules/@esbuild/android-x64' ]
+52 verbose reify failed optional dependency /var/www/node_modules/@esbuild/android-arm64
+53 silly reify mark deleted [ '/var/www/node_modules/@esbuild/android-arm64' ]
+54 verbose reify failed optional dependency /var/www/node_modules/@esbuild/android-arm
+55 silly reify mark deleted [ '/var/www/node_modules/@esbuild/android-arm' ]
+56 silly tarball no local data for @esbuild/linux-x64@https://registry.npmjs.org/@esbuild/linux-x64/-/linux-x64-0.17.19.tgz. Extracting by manifest.
+57 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 731ms
+58 silly audit report {
+58 silly audit report   '@babel/traverse': [
+58 silly audit report     {
+58 silly audit report       id: 1096886,
+58 silly audit report       url: 'https://github.com/advisories/GHSA-67hx-6x53-jw92',
+58 silly audit report       title: 'Babel vulnerable to arbitrary code execution when compiling specifically crafted malicious code',
+58 silly audit report       severity: 'critical',
+58 silly audit report       vulnerable_versions: '<7.23.2',
+58 silly audit report       cwe: [Array],
+58 silly audit report       cvss: [Object]
+58 silly audit report     }
+58 silly audit report   ],
+58 silly audit report   axios: [
+58 silly audit report     {
+58 silly audit report       id: 1097679,
+58 silly audit report       url: 'https://github.com/advisories/GHSA-wf5p-g6vw-rhxx',
+58 silly audit report       title: 'Axios Cross-Site Request Forgery Vulnerability',
+58 silly audit report       severity: 'moderate',
+58 silly audit report       vulnerable_versions: '>=0.8.1 <0.28.0',
+58 silly audit report       cwe: [Array],
+58 silly audit report       cvss: [Object]
+58 silly audit report     },
+58 silly audit report     {
+58 silly audit report       id: 1097680,
+58 silly audit report       url: 'https://github.com/advisories/GHSA-wf5p-g6vw-rhxx',
+58 silly audit report       title: 'Axios Cross-Site Request Forgery Vulnerability',
+58 silly audit report       severity: 'moderate',
+58 silly audit report       vulnerable_versions: '>=1.0.0 <1.6.0',
+58 silly audit report       cwe: [Array],
+58 silly audit report       cvss: [Object]
+58 silly audit report     },
+58 silly audit report     {
+58 silly audit report       id: 1098583,
+58 silly audit report       url: 'https://github.com/advisories/GHSA-8hc4-vh64-cxmj',
+58 silly audit report       title: 'Server-Side Request Forgery in axios',
+58 silly audit report       severity: 'high',
+58 silly audit report       vulnerable_versions: '>=1.3.2 <=1.7.3',
+58 silly audit report       cwe: [Array],
+58 silly audit report       cvss: [Object]
+58 silly audit report     }
+58 silly audit report   ],
+58 silly audit report   braces: [
+58 silly audit report     {
+58 silly audit report       id: 1098094,
+58 silly audit report       url: 'https://github.com/advisories/GHSA-grv7-fg5c-xmjg',
+58 silly audit report       title: 'Uncontrolled resource consumption in braces',
+58 silly audit report       severity: 'high',
+58 silly audit report       vulnerable_versions: '<3.0.3',
+58 silly audit report       cwe: [Array],
+58 silly audit report       cvss: [Object]
+58 silly audit report     }
+58 silly audit report   ],
+58 silly audit report   'follow-redirects': [
+58 silly audit report     {
+58 silly audit report       id: 1096856,
+58 silly audit report       url: 'https://github.com/advisories/GHSA-cxjh-pqwp-8mfp',
+58 silly audit report       title: "follow-redirects' Proxy-Authorization header kept across hosts",
+58 silly audit report       severity: 'moderate',
+58 silly audit report       vulnerable_versions: '<=1.15.5',
+58 silly audit report       cwe: [Array],
+58 silly audit report       cvss: [Object]
+58 silly audit report     },
+58 silly audit report     {
+58 silly audit report       id: 1096353,
+58 silly audit report       url: 'https://github.com/advisories/GHSA-jchw-25xp-jwwc',
+58 silly audit report       title: 'Follow Redirects improperly handles URLs in the url.parse() function',
+58 silly audit report       severity: 'moderate',
+58 silly audit report       vulnerable_versions: '<1.15.4',
+58 silly audit report       cwe: [Array],
+58 silly audit report       cvss: [Object]
+58 silly audit report     }
+58 silly audit report   ],
+58 silly audit report   micromatch: [
+58 silly audit report     {
+58 silly audit report       id: 1098681,
+58 silly audit report       url: 'https://github.com/advisories/GHSA-952p-6rrq-rcjv',
+58 silly audit report       title: 'Regular Expression Denial of Service (ReDoS) in micromatch',
+58 silly audit report       severity: 'moderate',
+58 silly audit report       vulnerable_versions: '<4.0.8',
+58 silly audit report       cwe: [Array],
+58 silly audit report       cvss: [Object]
+58 silly audit report     }
+58 silly audit report   ],
+58 silly audit report   postcss: [
+58 silly audit report     {
+58 silly audit report       id: 1094544,
+58 silly audit report       url: 'https://github.com/advisories/GHSA-7fh5-64p2-3v2j',
+58 silly audit report       title: 'PostCSS line return parsing error',
+58 silly audit report       severity: 'moderate',
+58 silly audit report       vulnerable_versions: '<8.4.31',
+58 silly audit report       cwe: [Array],
+58 silly audit report       cvss: [Object]
+58 silly audit report     }
+58 silly audit report   ],
+58 silly audit report   rollup: [
+58 silly audit report     {
+58 silly audit report       id: 1099758,
+58 silly audit report       url: 'https://github.com/advisories/GHSA-gcx4-mw62-g8wm',
+58 silly audit report       title: 'DOM Clobbering Gadget found in rollup bundled scripts that leads to XSS',
+58 silly audit report       severity: 'high',
+58 silly audit report       vulnerable_versions: '>=3.0.0 <3.29.5',
+58 silly audit report       cwe: [Array],
+58 silly audit report       cvss: [Object]
+58 silly audit report     }
+58 silly audit report   ],
+58 silly audit report   semver: [
+58 silly audit report     {
+58 silly audit report       id: 1098564,
+58 silly audit report       url: 'https://github.com/advisories/GHSA-c2qf-rxjj-qqgw',
+58 silly audit report       title: 'semver vulnerable to Regular Expression Denial of Service',
+58 silly audit report       severity: 'high',
+58 silly audit report       vulnerable_versions: '>=6.0.0 <6.3.1',
+58 silly audit report       cwe: [Array],
+58 silly audit report       cvss: [Object]
+58 silly audit report     }
+58 silly audit report   ],
+58 silly audit report   sweetalert2: [
+58 silly audit report     {
+58 silly audit report       id: 1094698,
+58 silly audit report       url: 'https://github.com/advisories/GHSA-mrr8-v49w-3333',
+58 silly audit report       title: 'sweetalert2 v11.6.14 and above contains potentially undesirable behavior',
+58 silly audit report       severity: 'low',
+58 silly audit report       vulnerable_versions: '>=11.6.14',
+58 silly audit report       cwe: [Array],
+58 silly audit report       cvss: [Object]
+58 silly audit report     }
+58 silly audit report   ],
+58 silly audit report   vite: [
+58 silly audit report     {
+58 silly audit report       id: 1099694,
+58 silly audit report       url: 'https://github.com/advisories/GHSA-64vr-g452-qvp3',
+58 silly audit report       title: 'Vite DOM Clobbering gadget found in vite bundled scripts that leads to XSS',
+58 silly audit report       severity: 'moderate',
+58 silly audit report       vulnerable_versions: '>=4.0.0 <4.5.4',
+58 silly audit report       cwe: [Array],
+58 silly audit report       cvss: [Object]
+58 silly audit report     },
+58 silly audit report     {
+58 silly audit report       id: 1099696,
+58 silly audit report       url: 'https://github.com/advisories/GHSA-9cwx-2883-4wfx',
+58 silly audit report       title: "Vite's `server.fs.deny` is bypassed when using `?import&raw`",
+58 silly audit report       severity: 'moderate',
+58 silly audit report       vulnerable_versions: '>=4.0.0 <=4.5.3',
+58 silly audit report       cwe: [Array],
+58 silly audit report       cvss: [Object]
+58 silly audit report     },
+58 silly audit report     {
+58 silly audit report       id: 1095467,
+58 silly audit report       url: 'https://github.com/advisories/GHSA-c24v-8rfc-w8vw',
+58 silly audit report       title: 'Vite dev server option `server.fs.deny` can be bypassed when hosted on case-insensitive filesystem',
+58 silly audit report       severity: 'high',
+58 silly audit report       vulnerable_versions: '>=4.0.0 <=4.5.1',
+58 silly audit report       cwe: [Array],
+58 silly audit report       cvss: [Object]
+58 silly audit report     },
+58 silly audit report     {
+58 silly audit report       id: 1096895,
+58 silly audit report       url: 'https://github.com/advisories/GHSA-8jhw-289h-jh2g',
+58 silly audit report       title: "Vite's `server.fs.deny` did not deny requests for patterns with directories.",
+58 silly audit report       severity: 'moderate',
+58 silly audit report       vulnerable_versions: '>=4.0.0 <=4.5.2',
+58 silly audit report       cwe: [Array],
+58 silly audit report       cvss: [Object]
+58 silly audit report     }
+58 silly audit report   ]
+58 silly audit report }
+59 http fetch GET 200 https://registry.npmjs.org/npm 1149ms
+60 http fetch GET 200 https://registry.npmjs.org/@babel%2ftraverse 226ms (cache miss)
+61 http fetch GET 200 https://registry.npmjs.org/axios 3985ms (cache miss)
+62 http fetch GET 200 https://registry.npmjs.org/follow-redirects 4217ms (cache miss)
+63 http fetch GET 200 https://registry.npmjs.org/semver 4278ms (cache miss)
+64 http fetch GET 200 https://registry.npmjs.org/braces 4291ms (cache miss)
+65 http fetch GET 200 https://registry.npmjs.org/micromatch 4305ms (cache miss)
+66 http fetch GET 200 https://registry.npmjs.org/postcss 4535ms (cache miss)
+67 http fetch GET 200 https://registry.npmjs.org/vite 5168ms (cache miss)
+68 http fetch GET 200 https://registry.npmjs.org/sweetalert2 5357ms (cache miss)
+69 http fetch GET 200 https://registry.npmjs.org/rollup 5425ms (cache miss)
+70 http fetch GET 200 https://registry.npmjs.org/@babel%2fcore 493ms (cache miss)
+71 http fetch GET 200 https://registry.npmjs.org/@babel%2fhelpers 577ms (cache miss)
+72 http fetch GET 200 https://registry.npmjs.org/@babel%2fhelper-module-transforms 736ms (cache miss)
+73 http fetch GET 200 https://registry.npmjs.org/midtrans-client 1053ms (cache miss)
+74 http fetch GET 200 https://registry.npmjs.org/@inertiajs%2fcore 2000ms (cache miss)
+75 http fetch GET 200 https://registry.npmjs.org/chokidar 219ms (cache miss)
+76 http fetch GET 200 https://registry.npmjs.org/fast-glob 400ms (cache miss)
+77 http fetch GET 200 https://registry.npmjs.org/@esbuild/linux-x64/-/linux-x64-0.17.19.tgz 12416ms (cache miss)
+78 http fetch GET 200 https://registry.npmjs.org/tailwindcss 6032ms (cache miss)
+79 http fetch GET 200 https://registry.npmjs.org/postcss-nested 213ms (cache miss)
+80 http fetch GET 200 https://registry.npmjs.org/postcss-import 223ms (cache miss)
+81 http fetch GET 200 https://registry.npmjs.org/postcss-load-config 226ms (cache miss)
+82 http fetch GET 200 https://registry.npmjs.org/postcss-js 228ms (cache miss)
+83 http fetch GET 200 https://registry.npmjs.org/autoprefixer 577ms (cache miss)
+84 http fetch GET 200 https://registry.npmjs.org/daisyui 1029ms (cache miss)
+85 http fetch GET 200 https://registry.npmjs.org/@babel%2fhelper-compilation-targets 904ms (cache miss)
+86 http fetch GET 200 https://registry.npmjs.org/laravel-vite-plugin 384ms (cache miss)
+87 http fetch GET 200 https://registry.npmjs.org/vite-plugin-full-reload 421ms (cache miss)
+88 http fetch GET 200 https://registry.npmjs.org/@vitejs%2fplugin-react 426ms (cache miss)
+89 silly ADD
+90 silly ADD
+91 silly ADD
+92 silly ADD
+93 silly ADD
+94 silly ADD
+95 silly ADD node_modules/@esbuild/linux-x64
+96 silly ADD
+97 silly ADD
+98 silly ADD
+99 silly ADD
+100 silly ADD
+101 silly ADD
+102 silly ADD
+103 silly ADD
+104 silly ADD
+105 silly ADD
+106 silly ADD
+107 silly ADD
+108 silly ADD
+109 silly ADD
+110 silly ADD
+111 notice
+111 notice New [33mminor[39m version of npm available! [33m10.7.0[39m -> [34m10.9.0[39m
+111 notice Changelog: [34mhttps://github.com/npm/cli/releases/tag/v10.9.0[39m
+111 notice To update run: [4mnpm install -g npm@10.9.0[24m
+111 notice  { force: true, [Symbol(proc-log.meta)]: true }
+112 verbose exit 0
+113 info ok
