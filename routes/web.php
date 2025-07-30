@@ -45,7 +45,7 @@ Route::get('/products', [UserController::class, 'show'])->name('index.products')
 Route::get('/thanks', [UserController::class, 'endpoint'])->name('endpoint');
 Route::get('/endpoint', [UserController::class, 'paymentSuccess'])->name('payment.success');
 
-Route::middleware('auth')->group(function () {
+Route::middleware(middleware: 'auth')->group(function () {
     Route::post('/profile-pic/{id}', [UserController::class, 'profile'])->name('profile.image');
     Route::get('/add-to-cart', [UserController::class, 'addToCart'])->name('add-to-cart');
     Route::get('/cart', [UserController::class, 'cart'])->name('cart');

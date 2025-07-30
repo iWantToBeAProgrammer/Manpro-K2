@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('product_desc');
             $table->string('category');
             $table->integer('price');
-            $table->integer('stock');
+            $table->integer(column: 'stock');
             $table->string('image')->nullable();
             $table->decimal('weight', 10, 2)->nullable()->default(null);
             $table->timestamps();
