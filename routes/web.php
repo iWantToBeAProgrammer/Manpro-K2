@@ -27,7 +27,7 @@ use Inertia\Inertia;
 //     ]); 
 // });
 
-Route::middleware('auth', 'isAdmin')->group(function () {
+Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/admin', [AdminController::class, 'index'])->name('home');
     Route::get('/admin/user', [AdminController::class, 'details'])->name('user-details');
     Route::get('/admin/user/delete/{id}', [AdminController::class, 'delete'])->name('delete');
@@ -45,7 +45,7 @@ Route::get('/products', [UserController::class, 'show'])->name('index.products')
 Route::get('/thanks', [UserController::class, 'endpoint'])->name('endpoint');
 Route::get('/endpoint', [UserController::class, 'paymentSuccess'])->name('payment.success');
 
-Route::middleware(middleware: 'auth')->group(function () {
+Route::middleware('auth')->group(function () {
     Route::post('/profile-pic/{id}', [UserController::class, 'profile'])->name('profile.image');
     Route::get('/add-to-cart', [UserController::class, 'addToCart'])->name('add-to-cart');
     Route::get('/cart', [UserController::class, 'cart'])->name('cart');

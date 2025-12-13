@@ -21,38 +21,41 @@ const Card = ({ props }) => {
     const [num, setNum] = useState(1);
 
     let handleIncrement = () => {
-        if(num < 10 ) {
-            setNum(Number(num)+1)
+        if (num < 10) {
+            setNum(Number(num) + 1);
         }
-    } 
+    };
 
     let handleDecerement = () => {
-        if(num > 0) {
-            setNum(num - 1)
+        if (num > 0) {
+            setNum(num - 1);
         }
-    }
+    };
 
     let handleChange = (e) => {
-        setNum(e.target.value)
-    }
+        setNum(e.target.value);
+    };
 
     const addToCart = () => {
         const data = {
             id: id,
             quantity: num,
-        }
+        };
 
-        console.log(data)
+        console.log(data);
 
-
-        axios.get('http://localhost:8000/add-to-cart', data).then((response) => {
-           if(response.status === 200) {
-            Swal.fire('Product Added To Cart');
-           }
-        })
+        axios
+            .get("http://127.0.0.1:8000/add-to-cart", data)
+            .then((response) => {
+                if (response.status === 200) {
+                    Swal.fire("Product Added To Cart");
+                }
+            });
 
         props.auth.user == null
-            ? router.get(route("login"), {message: 'Please login before buying anything'})
+            ? router.get(route("login"), {
+                  message: "Please login before buying anything",
+              })
             : router.get(route("add-to-cart", props.auth.user.id), data);
     };
 
@@ -67,13 +70,13 @@ const Card = ({ props }) => {
                         <figure className="w-80">
                             {data.image == null || data.image == "" ? (
                                 <img
-                                    src="http://localhost:8000/storage/assets/No_Image_Available.jpg"
+                                    src="http://127.0.0.1:8000/storage/assets/No_Image_Available.jpg"
                                     width={100}
                                     className="w-80 h-80"
                                 />
                             ) : (
                                 <img
-                                    src={`http://localhost:8000/storage/${data.image}`}
+                                    src={`http://127.0.0.1:8000/storage/${data.image}`}
                                     alt=""
                                     width={100}
                                     className="w-80 h-80"
@@ -97,7 +100,7 @@ const Card = ({ props }) => {
                                         setCategory(data.category);
                                         setPrice(data.price);
                                         setStock(data.stock);
-                                        setWeight(data.weight)
+                                        setWeight(data.weight);
                                         setCartImage(data.image);
                                         window.cart.show();
                                     }}
@@ -115,13 +118,13 @@ const Card = ({ props }) => {
                         <div className="me-8 w-[100%]">
                             {cartImage == "" || cartImage == null ? (
                                 <img
-                                    src={`http://localhost:8000/storage/assets/No_Image_Available.jpg`}
+                                    src={`http://127.0.0.1:8000/storage/assets/No_Image_Available.jpg`}
                                     alt=""
                                     className=" w-full h-[220px] object-fill object-center"
                                 />
                             ) : (
                                 <img
-                                    src={`http://localhost:8000/storage/${cartImage}`}
+                                    src={`http://127.0.0.1:8000/storage/${cartImage}`}
                                     alt=""
                                     className=" w-full h-[220px] object-fill object-center"
                                 />
@@ -142,10 +145,26 @@ const Card = ({ props }) => {
                     </div>
                     <div className="modal-action">
                         <div className="input-group flex items-center">
-                            <button className="input-group-text btn" type="button" onClick={handleDecerement}>-</button>
-                            <input type="text" className="input input-bordered w-[50px] max-w-xs " onChange={handleChange} value={num}/>
-                            <button className="input-group-text btn" type="button" onClick={handleIncrement}>+</button>
-
+                            <button
+                                className="input-group-text btn"
+                                type="button"
+                                onClick={handleDecerement}
+                            >
+                                -
+                            </button>
+                            <input
+                                type="text"
+                                className="input input-bordered w-[50px] max-w-xs "
+                                onChange={handleChange}
+                                value={num}
+                            />
+                            <button
+                                className="input-group-text btn"
+                                type="button"
+                                onClick={handleIncrement}
+                            >
+                                +
+                            </button>
                         </div>
                         <button
                             className="btn btn-primary"

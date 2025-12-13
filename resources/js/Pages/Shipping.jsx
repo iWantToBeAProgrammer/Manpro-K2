@@ -37,7 +37,7 @@ export default function Shipping(props) {
     useEffect(() => {
         const provinsi = async () => {
             const provinsi = await axios.get(route("provinsi"));
-            setProvinsi(provinsi.data.rajaongkir.results);
+            setProvinsi(provinsi.data.data);
         };
 
         provinsi();
@@ -55,8 +55,6 @@ export default function Shipping(props) {
             document.body.removeChild(script);
         };
     }, []);
-
-    console.log(provinsi);
 
     const totalWeight = () => {
         let total = 0;
@@ -84,11 +82,12 @@ export default function Shipping(props) {
 
     const city = async (id) => {
         const response = await axios.get(route("kota", id));
-        setKota(response.data.rajaongkir.results);
+        console.log("response: ", response);
+        setKota(response.data.data);
     };
 
     const getFee = async () => {
-        const weight = totalWeight();
+        const weight = totalWeight() || 1000;
 
         const data = {
             name: name,
@@ -100,14 +99,17 @@ export default function Shipping(props) {
             weight: weight,
         };
 
-        const response = await axios.post(route("get.fee"), data);
+        console.log("data shipping: ", data);
 
-        const requestData = await response.data.rajaongkir.results[0];
+        const response = await axios.post(route("get.fee"), data);
+        console.log("response cost: ", response);
+
+        const requestData = await response.data.data;
 
         setCost(requestData);
     };
 
-    console.log(cost);
+    console
 
     return (
         <>
@@ -155,11 +157,8 @@ export default function Shipping(props) {
                                         </option>
                                         {provinsi.map((data, i) => {
                                             return (
-                                                <option
-                                                    key={i}
-                                                    value={data.province_id}
-                                                >
-                                                    {data.province}
+                                                <option key={i} value={data.id}>
+                                                    {data.name}
                                                 </option>
                                             );
                                         })}
@@ -175,11 +174,8 @@ export default function Shipping(props) {
                                         </option>
                                         {kota.map((data, i) => {
                                             return (
-                                                <option
-                                                    value={data.city_id}
-                                                    key={i}
-                                                >
-                                                    {data.city_name}
+                                                <option value={data.id} key={i}>
+                                                    {data.name}
                                                 </option>
                                             );
                                         })}
@@ -233,7 +229,7 @@ export default function Shipping(props) {
                                 >
                                     <div className="order-img">
                                         <img
-                                            src={`http://localhost:8000/storage/${data.image}`}
+                                            src={`http://127.0.0.1:8000/storage/${data.image}`}
                                             alt=""
                                             width={100}
                                             height={100}
@@ -329,21 +325,21 @@ export default function Shipping(props) {
                                 tampil disini
                             </h1>
                         ) : (
-                            cost.costs.map((data, i) => {
+                            cost.map((data, i) => {
                                 return (
                                     <button
                                         key={i}
                                         onClick={() =>
-                                            shippingValue(data.cost[0].value)
+                                            shippingValue(data.cost)
                                         }
                                         className="w-full text-left flex justify-between bg-base-100 p-6 rounded-xl mb-8 items-center cursor-pointer focus:outline-none focus-within:ring focus:ring-primary"
                                     >
                                         <div className="courier w-[30%]">
                                             <h1 className="shipping-code uppercase font-bold">
-                                                {cost.code}
+                                                {data.code}
                                             </h1>
                                             <h1 className="shipping-name">
-                                                {cost.name}
+                                                {data.name}
                                             </h1>
                                         </div>
                                         <div className="service w-[35%]">
@@ -357,7 +353,7 @@ export default function Shipping(props) {
                                         <div className="cost w-[25%]">
                                             <h1 className="shipping-cost font-bold text-lg ">
                                                 {Rupiah.format(
-                                                    data.cost[0].value
+                                                    data.cost
                                                 )}
                                             </h1>
                                         </div>

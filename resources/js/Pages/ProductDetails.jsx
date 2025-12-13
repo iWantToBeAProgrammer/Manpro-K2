@@ -245,13 +245,13 @@ export default function ProductDetails(props) {
                                     >
                                         {data.image == "" || !data.image ? (
                                             <img
-                                                src="http://localhost:8000/storage/assets/No_Image_Available.jpg"
+                                                src="http://127.0.0.1:8000/storage/assets/No_Image_Available.jpg"
                                                 width={100}
                                                 className="h-[75px] overflow-hidden"
                                             />
                                         ) : (
                                             <img
-                                                src={`http://localhost:8000/storage/${data.image}`}
+                                                src={`http://127.0.0.1:8000/storage/${data.image}`}
                                                 alt=""
                                                 width={100}
                                                 className="h-[75px] overflow-hidden"
@@ -264,7 +264,7 @@ export default function ProductDetails(props) {
                                             onClick={() => {
                                                 axios
                                                     .get(
-                                                        `http://localhost:8000/admin/product/edit/${data.id}`
+                                                        `http://127.0.0.1:8000/admin/product/edit/${data.id}`
                                                     )
                                                     .then((response) => {
                                                         setId(
@@ -426,7 +426,7 @@ export default function ProductDetails(props) {
                     >
                         <form method="dialog" className="modal-box">
                             <img
-                                src={`http://localhost:8000/storage/${isOpen}`}
+                                src={`http://127.0.0.1:8000/storage/${isOpen}`}
                                 alt=""
                             />
                         </form>
@@ -447,7 +447,7 @@ export default function ProductDetails(props) {
                     >
                         <form method="dialog" className="modal-box">
                             <img
-                                src={`http://localhost:8000/storage/assets/No_Image_Available.jpg`}
+                                src={`http://127.0.0.1:8000/storage/assets/No_Image_Available.jpg`}
                                 alt=""
                             />
                         </form>

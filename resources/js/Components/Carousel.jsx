@@ -4,7 +4,7 @@ const Carousel = () => {
         <div className="carousel object-fill w-full md:h-[600px] object-center">
             <div id="slide1" className="carousel-item relative w-full">
                 <img
-                    src="http://localhost:8000/storage/assets/banner/banner_1.jpg"
+                    src="http://127.0.0.1:8000/storage/assets/banner/banner_1.jpg"
                     className="w-full object-center"
                 />
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -18,7 +18,7 @@ const Carousel = () => {
             </div>
             <div id="slide2" className="carousel-item relative w-full">
                 <img
-                    src="http://localhost:8000/storage/assets/banner/banner_2.jpg"
+                    src="http://127.0.0.1:8000/storage/assets/banner/banner_2.jpg"
                     className="w-full"
                 />
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -32,7 +32,7 @@ const Carousel = () => {
             </div>
             <div id="slide3" className="carousel-item relative w-full">
                 <img
-                    src="http://localhost:8000/storage/assets/banner/banner_3.jpg"
+                    src="http://127.0.0.1:8000/storage/assets/banner/banner_3.jpg"
                     className="w-full object-center"
                 />
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">

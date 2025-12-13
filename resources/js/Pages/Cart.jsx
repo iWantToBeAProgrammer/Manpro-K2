@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { Snap } from "midtrans-client";
 
 export default function Cart(props) {
-    console.log(props)
+    console.log(props);
 
     let totalItems = 0;
 
@@ -19,7 +19,7 @@ export default function Cart(props) {
         });
     };
 
-    console.log(props.cart)
+    console.log(props.cart);
 
     let initialState = [];
 
@@ -68,8 +68,6 @@ export default function Cart(props) {
         totalItems += element.product_qty;
     });
 
-    
-
     const confirm = (action, id) => {
         Swal.fire({
             title: "Are you sure?",
@@ -101,15 +99,13 @@ export default function Cart(props) {
         minimumFractionDigits: "0",
     });
 
-   
-
     const shipping = () => {
         const data = {
-            price: totalPrice
-        }
+            price: totalPrice,
+        };
 
-        router.get(route('shipping', data))
-    }
+        router.get(route("shipping", data));
+    };
 
     const quantityTotal = () => {
         let total = 0;
@@ -159,7 +155,7 @@ export default function Cart(props) {
                                         <th className="text-lg">{i + 1}</th>
                                         <td className="">
                                             <img
-                                                src={`http://localhost:8000/storage/${data.image}`}
+                                                src={`http://127.0.0.1:8000/storage/${data.image}`}
                                                 alt=""
                                                 width={100}
                                             />
@@ -217,7 +213,7 @@ export default function Cart(props) {
                                                         confirm(
                                                             "cart.delete",
                                                             orderId
-                                                        ) 
+                                                        )
                                                     }
                                                 >
                                                     <svg

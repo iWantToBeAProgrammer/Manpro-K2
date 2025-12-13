@@ -3,8 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 const Navbar = ({ title, user, cart }) => {
-
-    console.log(cart)
+    console.log(cart);
     const [image, setImage] = useState("");
 
     let totalItems = 0;
@@ -20,7 +19,7 @@ const Navbar = ({ title, user, cart }) => {
             totalItems = cart;
         }
     } else {
-        totalItems == 0
+        totalItems == 0;
     }
 
     const handleSubmit = () => {
@@ -165,7 +164,7 @@ const Navbar = ({ title, user, cart }) => {
                                 >
                                     {user.profile != null ? (
                                         <img
-                                            src={`http://localhost:8000/storage/${user.profile}`}
+                                            src={`http://127.0.0.1:8000/storage/${user.profile}`}
                                             className="absolute"
                                             alt=""
                                         />
@@ -205,13 +204,13 @@ const Navbar = ({ title, user, cart }) => {
                                     >
                                         {user.profile != null ? (
                                             <img
-                                                src={`http://localhost:8000/storage/${user.profile}`}
+                                                src={`http://127.0.0.1:8000/storage/${user.profile}`}
                                                 alt=""
                                                 width={250}
                                             />
                                         ) : (
                                             <img
-                                                src={`http://localhost:8000/storage/assets/add_profile.png`}
+                                                src={`http://127.0.0.1:8000/storage/assets/add_profile.png`}
                                                 alt=""
                                                 width={250}
                                             />
